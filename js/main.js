@@ -110,7 +110,7 @@ $(document).ready(function () {
             $this.countTo(options);
         }
     })
-
+    
     $('.owl-members').owlCarousel({
         loop: true,
         margin: 10,
@@ -124,7 +124,7 @@ $(document).ready(function () {
             '<i class="fa-solid fa-chevron-left"></i>',
             '<i class="fa-solid fa-chevron-right"></i>'
         ],
-        navContainer: '.custom-nav',
+        navContainer: '.member-custom-nav',
         responsive: {
             0: {
                 items: 1
@@ -136,6 +136,21 @@ $(document).ready(function () {
                 items: 5
             }
         }
+    });
+    $('.owl-enterprise-news').owlCarousel({
+        loop: true,
+        margin: 10,
+        nav: true,
+        rtl: true,
+        dots: false,
+        items: 1,
+        autoplay: true,
+        autoplayTimeout: 3000,
+        navText: [
+            '<i class="fa-solid fa-chevron-left"></i>',
+            '<i class="fa-solid fa-chevron-right"></i>'
+        ],
+        navContainer: '.news-custom-nav',
     });
 });
 

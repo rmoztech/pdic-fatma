@@ -20,6 +20,7 @@
 		rel="stylesheet">
 	<!-- Bootstrap CSS -->
 	<link rel="stylesheet" href="./css/bootstrap.min.css">
+	<link rel="stylesheet" href="./css/bootstrap.rtl.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 	<link href="./css/owl.carousel.css" rel="stylesheet">
 	<link href="./css/owl.theme.default.min.css" rel="stylesheet">
@@ -48,43 +49,43 @@
 			<div class="menu-list">
 				<ul class="nav">
 					<li class="nav-item active">
-						<a href="#">
+						<a href="./index.html">
 							الرئيسية
 						</a>
 					</li>
-					<li class="nav-item has-dropdwon">
+					<li class="nav-item has-dropdown">
 						<a href="#">
 							حول المؤسسة
 							<i class="fa-solid fa-chevron-down"></i>
 						</a>
-						<ul class="dropdwon-list">
+						<ul class="dropdown-list">
 							<li><a href="#" target="_self">النشأة والرؤية والرسالة </a></li>
 							<li><a href="#" target="_self">أهداف المؤسسة</a></li>
 							<li><a href="#" target="_self">الهيكل التنظيمي</a></li>
 						</ul>
 					</li>
-					<li class="nav-item has-dropdwon">
+					<li class="nav-item has-dropdown">
 						<a href="#">
 							تشريعات
 							<i class="fa-solid fa-chevron-down"></i>
 						</a>
-						<ul class="dropdwon-list">
+						<ul class="dropdown-list">
 							<li><a href="#" target="_self">قوانين</a></li>
 							<li><a href="#" target="_self">تعليمات وتعاميم</a></li>
 						</ul>
 					</li>
 					<li class="nav-item">
-						<a href="#">
+						<a href="./pages/releases.html">
 							الإصدارات
 						</a>
 					</li>
-					<li class="nav-item has-dropdwon">
+					<li class="nav-item has-dropdown">
 						<a href="#">
 							ضمان الودائع
 							<i class="fa-solid fa-chevron-down"></i>
 						</a>
-						<ul class="dropdwon-list">
-							<li><a href="#" target="_self">بيانات ضمان الودائع</a></li>
+						<ul class="dropdown-list">
+							<li><a href="./pages/depositTable.html" target="_self">بيانات ضمان الودائع</a></li>
 						</ul>
 					</li>
 					<li class="nav-item">
@@ -122,7 +123,7 @@
 					<input type="text" class="search-field" placeholder="بحث..." name="search" value="">
 				</div>
 				<div>
-					<button class="btn submit-btn">
+					<button class="btn submit-btn" type="submit">
 						<i class="fa-solid fa-magnifying-glass"></i>
 					</button>
 				</div>
@@ -144,7 +145,7 @@
 							<input type="text" class="search-field" placeholder="بحث..." name="search" value="">
 						</div>
 						<div>
-							<button class="btn submit-btn">
+							<button class="btn submit-btn" type="submit">
 								<i class="fa-solid fa-magnifying-glass"></i>
 							</button>
 						</div>
@@ -154,43 +155,43 @@
 			<div class="mobile-menu-list">
 				<ul class="nav">
 					<li class="nav-item active">
-						<a href="#">
+						<a href="./index.html">
 							الرئيسية
 						</a>
 					</li>
-					<li class="nav-item has-dropdwon">
+					<li class="nav-item has-dropdown">
 						<a href="#">
 							حول المؤسسة
 							<i class="fa-solid fa-chevron-down"></i>
 						</a>
-						<ul class="dropdwon-list">
+						<ul class="dropdown-list">
 							<li><a href="#" target="_self">النشأة والرؤية والرسالة </a></li>
 							<li><a href="#" target="_self">أهداف المؤسسة</a></li>
 							<li><a href="#" target="_self">الهيكل التنظيمي</a></li>
 						</ul>
 					</li>
-					<li class="nav-item has-dropdwon">
+					<li class="nav-item has-dropdown">
 						<a href="#">
 							تشريعات
 							<i class="fa-solid fa-chevron-down"></i>
 						</a>
-						<ul class="dropdwon-list">
+						<ul class="dropdown-list">
 							<li><a href="#" target="_self">قوانين</a></li>
 							<li><a href="#" target="_self">تعليمات وتعاميم</a></li>
 						</ul>
 					</li>
 					<li class="nav-item">
-						<a href="#">
+						<a href="./pages/releases.html">
 							الإصدارات
 						</a>
 					</li>
-					<li class="nav-item has-dropdwon">
+					<li class="nav-item has-dropdown">
 						<a href="#">
 							ضمان الودائع
 							<i class="fa-solid fa-chevron-down"></i>
 						</a>
-						<ul class="dropdwon-list">
-							<li><a href="#" target="_self">بيانات ضمان الودائع</a></li>
+						<ul class="dropdown-list">
+							<li><a href="./pages/depositTable.html" target="_self">بيانات ضمان الودائع</a></li>
 						</ul>
 					</li>
 					<li class="nav-item">
@@ -277,7 +278,7 @@
 	<section class="numbers container">
 		<div class="row">
 			<div class="col-12 col-md-7">
-				<div class="enterprise-number mb-4 mb-md-0">
+				<div class="enterprise-number mb-4 mb-md-0 px-4">
 					<h2>المؤسسة في أرقام</h2>
 					<div class="row mb-5">
 						<div class="col-6 col-md-4">
@@ -321,30 +322,68 @@
 					</div>
 					<div class="enterprise-news">
 						<h3>أخبار المؤسسة</h3>
-						<div class="card new-card mb-3">
-							<div class="row g-0">
-								<div class="col-md-6 new-card-img">
-									<img src="./img/new.png" alt="new img">
-									<span class="img-text">
-										أخبار المؤسسة
-									</span>
+						<div class="owl-enterprise-news owl-carousel owl-rtl mt-2">
+							<!--item01-->
+							<div class="item">
+								<div class="card new-card">
+									<div class="row g-0">
+										<div class="col-md-6 new-card-img">
+											<img src="./img/new1_1.png" alt="new img">
+											<span class="img-text">
+												أخبار المؤسسة
+											</span>
+										</div>
+										<div class="col-md-6">
+											<div class="card-body">
+												<h5 class="card-title mb-3">تخفيض الحد الأدني لرسوم الاشتراك</h5>
+												<p class="card-text card-date"><small class="text-muted">
+														<i class="fa-regular fa-calendar"></i>
+														27 سبتمبر 2022 </small>
+												</p>
+												<p class="card-text">استنادا الى القرار بقانون رقم ( ) بتاريخ 2020/09/13
+													بشأن
+													تعديل الفقرة ( 2 ) من أحكام المادة رقم ( 16 )
+												</p>
+												<a href="./pages/news-details.html" class="btn-bg">المزيد</a>
+											</div>
+										</div>
+									</div>
 								</div>
-								<div class="col-md-6">
-									<div class="card-body">
-										<h5 class="card-title">تخفيض الحد الأدني لرسوم الاشتراك</h5>
-										<p class="card-text card-date"><small class="text-muted">
-												<i class="fa-regular fa-calendar"></i>
-												27 سبتمبر 2022 </small>
-										</p>
-										<p class="card-text">استنادا الى القرار بقانون رقم ( ) بتاريخ 2020/09/13 بشأن
-											تعديل الفقرة ( 2 ) من أحكام المادة رقم ( 16 )[...]
-										</p>
-										<a href="#" class="btn btn-bg">المزيد</a>
+							</div>
+							<!--item01-->
+							<div class="item ">
+								<div class="card new-card">
+									<div class="row g-0">
+										<div class="col-md-6 new-card-img">
+											<img src="./img/new.png" alt="new img">
+											<span class="img-text">
+												أخبار المؤسسة
+											</span>
+										</div>
+										<div class="col-md-6">
+											<div class="card-body">
+												<h5 class="card-title  mb-3">تخفيض الحد الأدني لرسوم الاشتراك</h5>
+												<p class="card-text card-date"><small class="text-muted">
+														<i class="fa-regular fa-calendar"></i>
+														27 سبتمبر 2022 </small>
+												</p>
+												<p class="card-text">استنادا الى القرار بقانون رقم ( ) بتاريخ 2020/09/13
+													بشأن
+													تعديل الفقرة ( 2 ) من أحكام المادة رقم ( 16 )
+												</p>
+												<a href="./pages/news-details.html" class="btn-bg">المزيد</a>
+											</div>
+										</div>
 									</div>
 								</div>
 							</div>
 						</div>
-						<a href="#" class="btn-link">
+						<div class="owl-theme">
+							<div class="owl-controls">
+								<div class="news-custom-nav owl-nav"></div>
+							</div>
+						</div>
+						<a href="./pages/news.html" class="btn-link">
 							<span>المزيد من أخبار المؤسسة</span>
 							<i class="fa-solid fa-chevron-left px-2"></i>
 						</a>
@@ -395,7 +434,7 @@
 							<div class="img-report mx-auto">
 								<img src="./img/download-report.png" alt="download report">
 							</div>
-							<a href="#" class="btn btn-bg">
+							<a href="#" class="btn-bg">
 								تحميل التقرير السنوي
 								<i class="fa-solid fa-chevron-down me-2"></i>
 							</a>
@@ -461,7 +500,7 @@
 				</div>
 				<div class="owl-theme">
 					<div class="owl-controls">
-						<div class="custom-nav owl-nav"></div>
+						<div class="member-custom-nav owl-nav"></div>
 					</div>
 				</div>
 			</div>
@@ -482,7 +521,7 @@
 							<p>دولة فلسطين</p>
 						</div>
 						<div class="contact-links pe-3">
-							<a href="#" class="ms-4"> <i class="fa-solid fa-phone ms-2"></i> هاتف</a>
+							<a href="#"> <i class="fa-solid fa-phone ms-2"></i> هاتف</a>
 							<a href="#"><i class="fa-regular fa-envelope  ms-2"></i> بريد إلكتروني</a>
 						</div>
 					</div>
@@ -512,7 +551,7 @@
 									<h5 class="mb-3"> بيانات واحصائيات</h5>
 									<ul class="footer-list">
 										<li class="footer-list-item">
-											<a href="#"><i class="fa-solid fa-chevron-right"></i>بيانات ضمان الودائع
+											<a href="./pages/depositTable.html"><i class="fa-solid fa-chevron-right"></i>بيانات ضمان الودائع
 											</a>
 										</li>
 										<li class="footer-list-item"> <a href="#"><i
