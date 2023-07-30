@@ -621,6 +621,9 @@ i[class*=fa-chevron] {
   position: relative;
 }
 .numbers .enterprise-number .enterprise-news .card-title h5 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
   -webkit-line-clamp: 1;
   height: auto;
 }
@@ -1002,21 +1005,31 @@ i[class*=fa-chevron] {
 .jobs-page .jobs-tabel tbody td {
   padding: 15px;
 }
-.jobs-page .jobs-tabel tbody td:first-child, .jobs-page .jobs-tabel tbody td:last-child {
+.jobs-page .jobs-tabel tbody td:first-child {
   width: 200px;
 }
 .jobs-page .jobs-tabel tbody td span {
   font-weight: 500;
   display: block;
 }
-.jobs-page .jobs-tabel tbody td span:first-child {
+.jobs-page .jobs-tabel tbody td span:first-child a {
   color: #09438B;
+  transition: all 0.3s ease-in-out;
+}
+.jobs-page .jobs-tabel tbody td span:first-child a:hover {
+  color: #686868;
 }
 .jobs-page .jobs-tabel tbody td span:nth-child(2) {
   color: #333434;
 }
 .jobs-page .jobs-tabel tbody td span:nth-child(3) {
   color: #D0D0D0;
+}
+.jobs-page .jobs-tabel tbody td p {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  -webkit-line-clamp: 4;
 }
 .jobs-page .jobs-tabel tbody .uploadFile {
   overflow: hidden;
@@ -1049,24 +1062,30 @@ i[class*=fa-chevron] {
 /*===================
 	Start adverts page style 
 =====================*/
-.adverts-page .new-card {
+.adverts-page .content-inner {
+  width: 100%;
+}
+.adverts-page .content-inner .new-card {
   padding: 10px;
   border: 3px solid #E0EAF6;
   border-radius: 20px;
 }
-.adverts-page .new-card .new-card-img {
+.adverts-page .content-inner .new-card .new-card-img {
   height: auto;
 }
-.adverts-page .new-card .new-card-img img {
+.adverts-page .content-inner .new-card .new-card-img img {
   height: auto;
-  width: 85%;
+  width: 60%;
 }
 @media only screen and (max-width: 768px) {
-  .adverts-page .new-card .new-card-img img {
+  .adverts-page .content-inner .new-card .new-card-img img {
     width: 50%;
   }
 }
-.adverts-page .new-card .card-body .card-title h5 {
+.adverts-page .content-inner .new-card .card-body .card-title h5 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
   -webkit-line-clamp: 1;
   height: auto;
   font-size: 17px;

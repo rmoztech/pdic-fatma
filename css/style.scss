@@ -1,5 +1,7 @@
 @import "./sass/variables";
 @import "./sass/mediaQuery";
+@import "./sass/mixins";
+
 
 
 /*===================
@@ -264,10 +266,7 @@ i {
           font-weight: $font-weight-700;
           font-size: 15px;
           color: $grayDarkColor;
-          display: -webkit-box;
-          -webkit-box-orient: vertical;
-          overflow: hidden;
-          -webkit-line-clamp: 2;
+          @include line-clamp(2);
           line-height: 1.6;
           height: 50px;
 
@@ -281,10 +280,7 @@ i {
 
       .card-text {
         color: $grayLightColor;
-        display: -webkit-box;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
-        -webkit-line-clamp: 3;
+        @include line-clamp(3);
         line-height: 1.6;
 
         &.card-date {
@@ -774,7 +770,7 @@ i {
 
       .card-title {
         h5 {
-          -webkit-line-clamp: 1;
+          @include line-clamp(1);
           height: auto;
         }
       }
@@ -1304,8 +1300,10 @@ i {
       td {
         padding: 15px;
 
-        &:first-child,
-        &:last-child {
+        &:first-child // ,
+
+        // &:last-child
+          {
           width: 200px;
         }
 
@@ -1314,7 +1312,15 @@ i {
           display: block;
 
           &:first-child {
-            color: $mainColor;
+            a {
+              color: $mainColor;
+              transition: all 0.3s ease-in-out;
+
+              &:hover {
+                color: $grayFooterColor;
+              }
+            }
+
           }
 
           &:nth-child(2) {
@@ -1324,6 +1330,10 @@ i {
           &:nth-child(3) {
             color: $borderColor;
           }
+        }
+
+        p {
+          @include line-clamp(4)
         }
       }
 
@@ -1366,32 +1376,39 @@ i {
 	Start adverts page style 
 =====================*/
 .adverts-page {
-  .new-card {
-    padding: 10px;
-    border: 3px solid #E0EAF6;
-    border-radius: 20px;
+  .content-inner {
+    width: 100%;
 
-    .new-card-img {
-      height: auto;
+    .new-card {
+      padding: 10px;
+      border: 3px solid #E0EAF6;
+      border-radius: 20px;
 
-      img {
+      .new-card-img {
         height: auto;
-        width: 85%;
-        @include devices(tablet) {
-          width: 50%;
+
+        img {
+          height: auto;
+          width: 60%;
+
+          @include devices(tablet) {
+            width: 50%;
+          }
         }
       }
-    }
-    .card-body {
 
-      .card-title {
-        h5 {
-          -webkit-line-clamp: 1;
-          height: auto;
-          font-size: 17px;
+      .card-body {
+
+        .card-title {
+          h5 {
+            @include line-clamp(1);
+            height: auto;
+            font-size: 17px;
+          }
         }
       }
     }
   }
+
 
 }
