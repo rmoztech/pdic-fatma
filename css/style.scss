@@ -260,10 +260,24 @@ i {
 
     .card-body {
       .card-title {
-        font-weight: $font-weight-700;
-        font-size: 15px;
-        color: $grayDarkColor;
-        line-height: 1.6;
+        h5 {
+          font-weight: $font-weight-700;
+          font-size: 15px;
+          color: $grayDarkColor;
+          line-height: 1.6;
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          -webkit-line-clamp: 2;
+          line-height: 1.6;
+          height: 50px;
+
+          &:hover {
+            color: $mainColor;
+          }
+        }
+
+
       }
 
       .card-text {
@@ -302,6 +316,7 @@ i {
 
 .sidebar {
   width: 28%;
+
   .sidebar-box {
     border: 1px solid $borderColor;
     border-radius: 5px;
@@ -346,7 +361,7 @@ i {
         border: 1px solid $borderColor;
         font-size: 13px;
         padding: 7px 15px;
-
+        color: $grayLightColor;
         border-radius: 4px;
 
       }
@@ -368,7 +383,7 @@ i {
         color: $grayDarkColor;
 
         .accordion-button {
-          background-color: #F5F5F5;
+          background-color: $grayBg;
           outline: none;
           color: $grayDarkColor !important;
         }
@@ -380,14 +395,34 @@ i {
 
     }
   }
-  @include devices(tablet){
+
+  @include devices(tablet) {
     width: 100%;
   }
 }
-.content-inner{
+
+.content-inner {
   width: 70%;
-  @include devices(tablet){
+
+  @include devices(tablet) {
     width: 100%;
+  }
+}
+
+.social-list {
+  li {
+    display: inline-block;
+    padding: 0 5px;
+
+    a {
+      color: $grayLightColor;
+    }
+
+    &:hover {
+      a {
+        color: $grayDarkColor;
+      }
+    }
   }
 }
 
@@ -416,12 +451,11 @@ i {
     }
 
     .logo {
-      padding: 10px 0;
 
+      // padding: 10px 0;
       img {
         max-height: 90px;
       }
-
     }
 
     .menu-list {
@@ -582,9 +616,10 @@ i {
 
       .logo {
         width: 33%;
+        height: 100%;
 
         img {
-          max-height: 30px;
+          height: 100%;
         }
       }
 
@@ -700,7 +735,7 @@ i {
       color: $textColor;
 
       &.with-height {
-        min-height: 196px;
+        min-height: 166px;
 
         .perc-num {
           h3 {
@@ -711,10 +746,10 @@ i {
 
       @include devices(tablet) {
         &.with-height {
-          min-height: 150px;
+          min-height: 140px;
         }
 
-        min-height: 150px;
+        min-height: 140px;
       }
 
       h3 {
@@ -737,6 +772,12 @@ i {
 
     .enterprise-news {
       position: relative;
+      .card-title {
+        h5 {
+          -webkit-line-clamp: 1;
+          height: auto;
+        }
+      }
 
       h3 {
         color: $mainColor;
@@ -748,10 +789,6 @@ i {
 
       .owl-enterprise-news {
         position: relative;
-
-        .item {
-          // padding: 15px;
-        }
       }
 
       .news-custom-nav {
@@ -1035,24 +1072,6 @@ i {
     p {
       color: $grayLightColor;
     }
-
-    .social-list {
-      li {
-        display: inline-block;
-        padding: 0 5px;
-
-        a {
-          color: $grayLightColor;
-        }
-
-        &:hover {
-          a {
-            color: $grayDarkColor;
-          }
-        }
-      }
-    }
-
   }
 
 }
@@ -1116,6 +1135,227 @@ i {
     }
   }
 }
+
 /*===================
 	Start deposit table page style 
 =====================*/
+.deposit-page {
+  .content-inner {
+    .data-tabel {
+      border-color: #B9B9B9;
+      color: $grayDarkColor;
+      font-size: 15px;
+
+      thead {
+        tr {
+          th {
+            background-color: $grayBg;
+          }
+        }
+      }
+
+      tbody {
+        tr {
+          th {
+            background-color: $subColor;
+            font-weight: $font-weight-500;
+          }
+
+          td {
+            text-align: center;
+          }
+        }
+      }
+
+    }
+
+    @include devices(tablet) {
+      max-height: 500px;
+    }
+  }
+
+
+
+}
+
+/*===================
+	Start contact page style 
+=====================*/
+
+.contact-page {
+  .content-inner {
+    color: $grayDarkColor;
+
+    h4 {
+      font-weight: 700;
+    }
+
+    .contact-info {
+      border: 3px solid $subColor;
+      border-radius: 20px;
+      padding: 15px 0;
+      text-align: center;
+
+      p {
+        margin: 0;
+        color: $mainColor;
+        font-weight: 600;
+      }
+
+    }
+
+    .follow-us {
+      .social-list {
+        li {
+          a {
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+            background: $subColor;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: $mainColor;
+            transition: all 0.3s ease-in-out;
+
+            &:hover {
+              color: $whiteColor;
+              background-color: $mainColor;
+            }
+          }
+        }
+      }
+    }
+
+    .suggestions {
+      .sugg-label {
+        font-weight: $font-weight-500;
+      }
+
+      input {
+        color: $grayLightColor;
+        font-size: 14px;
+        height: 40px;
+        text-align: right;
+
+        &::placeholder {
+          color: $grayLightColor;
+        }
+      }
+
+      .btn-bg {
+        width: 100px;
+        border-radius: 4px;
+      }
+    }
+
+  }
+
+}
+
+/*===================
+	Start portfalio page style 
+=====================*/
+.portfalio-page {
+  .content-inner {
+    color: $grayDarkColor;
+
+    .portfalio-card {
+      padding: 20px;
+      border: 3px solid $subColor;
+      border-radius: 20px;
+
+      h4 {
+        font-weight: $font-weight-600;
+        color: $mainColor
+      }
+
+      p {
+        text-align: justify;
+        line-height: 1.7;
+      }
+    }
+  }
+
+}
+
+
+.jobs-page {
+  .jobs-tabel {
+    font-size: 14px;
+    border: 1px solid $borderColor;
+    border-radius: 4px;
+
+    // overflow: hidden;
+    thead {
+      background-color: $subColor;
+
+      th {
+        font-size: 14px;
+        padding: 13px 10px;
+        border: none;
+        font-weight: 500;
+      }
+    }
+
+    tbody {
+      td {
+        padding: 15px;
+
+        &:first-child,
+        &:last-child {
+          width: 200px;
+        }
+
+        span {
+          font-weight: 500;
+          display: block;
+
+          &:first-child {
+            color: $mainColor;
+          }
+
+          &:nth-child(2) {
+            color: $grayDarkColor;
+          }
+
+          &:nth-child(3) {
+            color: $borderColor;
+          }
+        }
+      }
+
+      .uploadFile {
+        overflow: hidden;
+        position: relative;
+        resize: none;
+        width: 90%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        border-radius: 4px;
+        margin: 0 auto;
+
+        span {
+          color: $whiteColor !important;
+        }
+
+        [type="file"] {
+          cursor: pointer !important;
+          display: block;
+          filter: alpha(opacity=0);
+          height: 100%;
+          width: 100%;
+          opacity: 0;
+          position: absolute;
+          right: 0px;
+          text-align: right;
+          top: 0px;
+          z-index: 1;
+        }
+      }
+
+
+    }
+  }
+}

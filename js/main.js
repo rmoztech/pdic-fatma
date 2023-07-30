@@ -110,7 +110,7 @@ $(document).ready(function () {
             $this.countTo(options);
         }
     })
-    
+
     $('.owl-members').owlCarousel({
         loop: true,
         margin: 10,
@@ -152,5 +152,10 @@ $(document).ready(function () {
         ],
         navContainer: '.news-custom-nav',
     });
+    $("input[type=file]").change(function (e) {
+        $(".filename").text(e.target.files[0].name);
+    });
+
+
 });
 

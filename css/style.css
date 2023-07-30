@@ -219,11 +219,20 @@ i[class*=fa-chevron] {
   padding: 3px 7px;
   border-radius: 5px 0 0 5px;
 }
-.card.new-card .card-body .card-title {
+.card.new-card .card-body .card-title h5 {
   font-weight: 700;
   font-size: 15px;
   color: #333434;
   line-height: 1.6;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  -webkit-line-clamp: 2;
+  line-height: 1.6;
+  height: 50px;
+}
+.card.new-card .card-body .card-title h5:hover {
+  color: #09438B;
 }
 .card.new-card .card-body .card-text {
   color: #666666;
@@ -288,6 +297,7 @@ i[class*=fa-chevron] {
   border: 1px solid #D0D0D0;
   font-size: 13px;
   padding: 7px 15px;
+  color: #666666;
   border-radius: 4px;
 }
 .sidebar .sidebar-box .btn-bg {
@@ -324,6 +334,17 @@ i[class*=fa-chevron] {
   }
 }
 
+.social-list li {
+  display: inline-block;
+  padding: 0 5px;
+}
+.social-list li a {
+  color: #666666;
+}
+.social-list li:hover a {
+  color: #333434;
+}
+
 /*===================
 	Start Header style 
 =====================*/
@@ -344,9 +365,6 @@ i[class*=fa-chevron] {
   display: none;
   color: #666666;
   font-size: 16px;
-}
-.header .header-inner .logo {
-  padding: 10px 0;
 }
 .header .header-inner .logo img {
   max-height: 90px;
@@ -474,9 +492,10 @@ i[class*=fa-chevron] {
   }
   .header .header-inner .logo {
     width: 33%;
+    height: 100%;
   }
   .header .header-inner .logo img {
-    max-height: 30px;
+    height: 100%;
   }
   .header .header-inner .menu-list {
     display: none;
@@ -573,17 +592,17 @@ i[class*=fa-chevron] {
   color: #3D464D;
 }
 .numbers .enterprise-number .card-number.with-height {
-  min-height: 196px;
+  min-height: 166px;
 }
 .numbers .enterprise-number .card-number.with-height .perc-num h3 {
   display: inline-block;
 }
 @media only screen and (max-width: 768px) {
   .numbers .enterprise-number .card-number {
-    min-height: 150px;
+    min-height: 140px;
   }
   .numbers .enterprise-number .card-number.with-height {
-    min-height: 150px;
+    min-height: 140px;
   }
 }
 .numbers .enterprise-number .card-number h3 {
@@ -601,6 +620,10 @@ i[class*=fa-chevron] {
 }
 .numbers .enterprise-number .enterprise-news {
   position: relative;
+}
+.numbers .enterprise-number .enterprise-news .card-title h5 {
+  -webkit-line-clamp: 1;
+  height: auto;
 }
 .numbers .enterprise-number .enterprise-news h3 {
   color: #09438B;
@@ -823,16 +846,6 @@ i[class*=fa-chevron] {
 .footer .footer-social p {
   color: #666666;
 }
-.footer .footer-social .social-list li {
-  display: inline-block;
-  padding: 0 5px;
-}
-.footer .footer-social .social-list li a {
-  color: #666666;
-}
-.footer .footer-social .social-list li:hover a {
-  color: #333434;
-}
 
 /*===================
 	Start news page style 
@@ -876,4 +889,157 @@ i[class*=fa-chevron] {
 
 /*===================
 	Start deposit table page style 
-=====================*//*# sourceMappingURL=style.css.map */
+=====================*/
+.deposit-page .content-inner .data-tabel {
+  border-color: #B9B9B9;
+  color: #333434;
+  font-size: 15px;
+}
+.deposit-page .content-inner .data-tabel thead tr th {
+  background-color: #F5F5F5;
+}
+.deposit-page .content-inner .data-tabel tbody tr th {
+  background-color: #E0EAF6;
+  font-weight: 500;
+}
+.deposit-page .content-inner .data-tabel tbody tr td {
+  text-align: center;
+}
+@media only screen and (max-width: 768px) {
+  .deposit-page .content-inner {
+    max-height: 500px;
+  }
+}
+
+/*===================
+	Start contact page style 
+=====================*/
+.contact-page .content-inner {
+  color: #333434;
+}
+.contact-page .content-inner h4 {
+  font-weight: 700;
+}
+.contact-page .content-inner .contact-info {
+  border: 3px solid #E0EAF6;
+  border-radius: 20px;
+  padding: 15px 0;
+  text-align: center;
+}
+.contact-page .content-inner .contact-info p {
+  margin: 0;
+  color: #09438B;
+  font-weight: 600;
+}
+.contact-page .content-inner .follow-us .social-list li a {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background: #E0EAF6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #09438B;
+  transition: all 0.3s ease-in-out;
+}
+.contact-page .content-inner .follow-us .social-list li a:hover {
+  color: #fff;
+  background-color: #09438B;
+}
+.contact-page .content-inner .suggestions .sugg-label {
+  font-weight: 500;
+}
+.contact-page .content-inner .suggestions input {
+  color: #666666;
+  font-size: 14px;
+  height: 40px;
+  text-align: right;
+}
+.contact-page .content-inner .suggestions input::placeholder {
+  color: #666666;
+}
+.contact-page .content-inner .suggestions .btn-bg {
+  width: 100px;
+  border-radius: 4px;
+}
+
+/*===================
+	Start portfalio page style 
+=====================*/
+.portfalio-page .content-inner {
+  color: #333434;
+}
+.portfalio-page .content-inner .portfalio-card {
+  padding: 20px;
+  border: 3px solid #E0EAF6;
+  border-radius: 20px;
+}
+.portfalio-page .content-inner .portfalio-card h4 {
+  font-weight: 600;
+  color: #09438B;
+}
+.portfalio-page .content-inner .portfalio-card p {
+  text-align: justify;
+  line-height: 1.7;
+}
+
+.jobs-page .jobs-tabel {
+  font-size: 14px;
+  border: 1px solid #D0D0D0;
+  border-radius: 4px;
+}
+.jobs-page .jobs-tabel thead {
+  background-color: #E0EAF6;
+}
+.jobs-page .jobs-tabel thead th {
+  font-size: 14px;
+  padding: 13px 10px;
+  border: none;
+  font-weight: 500;
+}
+.jobs-page .jobs-tabel tbody td {
+  padding: 15px;
+}
+.jobs-page .jobs-tabel tbody td:first-child, .jobs-page .jobs-tabel tbody td:last-child {
+  width: 200px;
+}
+.jobs-page .jobs-tabel tbody td span {
+  font-weight: 500;
+  display: block;
+}
+.jobs-page .jobs-tabel tbody td span:first-child {
+  color: #09438B;
+}
+.jobs-page .jobs-tabel tbody td span:nth-child(2) {
+  color: #333434;
+}
+.jobs-page .jobs-tabel tbody td span:nth-child(3) {
+  color: #D0D0D0;
+}
+.jobs-page .jobs-tabel tbody .uploadFile {
+  overflow: hidden;
+  position: relative;
+  resize: none;
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 4px;
+  margin: 0 auto;
+}
+.jobs-page .jobs-tabel tbody .uploadFile span {
+  color: #fff !important;
+}
+.jobs-page .jobs-tabel tbody .uploadFile [type=file] {
+  cursor: pointer !important;
+  display: block;
+  filter: alpha(opacity=0);
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  position: absolute;
+  right: 0px;
+  text-align: right;
+  top: 0px;
+  z-index: 1;
+}/*# sourceMappingURL=style.css.map */
