@@ -341,7 +341,8 @@
                                             </div>
                                             <div class="mb-4">
                                                 <label class=" mb-md-0 mb-3">رصيد القرض القائم</label>
-                                                <input type="number" class="form-control" id="outstanding-loan">
+                                                <input type="number" class="form-control" id="outstanding-loan"
+                                                    name="outstandingLoan">
                                             </div>
                                             <div class="mb-4">
                                                 <label class=" mb-md-0 mb-3">قيمة التأمينات النقدية على القرض </label>
@@ -353,10 +354,8 @@
                                         </div>
 
                                     </div>
-                                    <div class="sorry">
-                                        <p class="my-0">نأسف نحن لانضمن هذا النوع من الحسابات
-                                        </p>
-                                    </div>
+                                    <p class="sorry my-0 text-center">نأسف نحن لانضمن هذا النوع من الحسابات
+                                    </p>
                                 </form>
                             </div>
                         </div>
@@ -371,6 +370,37 @@
                         <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
                             data-bs-parent="#accordionExample">
                             <div class="accordion-body">
+                                <div class="report-info d-flex align-items-center justify-content-between flex-wrap mb-4">
+                                    <div>
+                                        <h5 class="mb-4">اسم الحساب</h5>
+                                        <span>اسم الحساب المدخل</span>
+
+                                    </div>
+                                    <div>
+                                        <h5 class="mb-4"> الودائع</h5>
+                                        <span> 87 <span>
+                                    </div>
+                                    <div>
+                                        <h5 class="mb-4">القروض </h5>
+                                        <span> 44</span>
+                                    </div>
+
+                                </div>
+                                <div class="mb-4">
+                                    <div class="another-info d-flex align-items-center justify-content-start">
+                                        <h5> مجموع الودائع</h5>
+                                        <span> 77</span>
+                                    </div>
+                                    <div class="another-info d-flex align-items-center justify-content-start">
+                                        <h5>  صافي القروض</h5>
+                                        <span> 77</span>
+                                    </div>
+                                    <div class="another-info d-flex align-items-center justify-content-start">
+                                        <h5>  قيمة الضمان</h5>
+                                        <span> 77</span>
+                                    </div>
+                                </div>
+
                                 <button class="btn-bg refresh" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                                     أضف حساب جديد
@@ -379,7 +409,6 @@
                                     data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                                     ابدأ من جديد
                                 </button>
-
                                 <button class="btn-bg ">
                                     طباعة التقرير
                                 </button>

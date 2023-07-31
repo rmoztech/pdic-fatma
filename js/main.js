@@ -231,62 +231,46 @@ $(document).ready(function () {
         }
     });
 
-    $(".refresh").click(function(){
+    $(".refresh").click(function () {
         location.reload(true);
     })
-    $(".reset").click(function() {
+    $(".reset").click(function () {
         $(".add-info-form").find("input, select").val("");
     });
+
+    $.validator.addMethod("valueNotEquals", function(value, element, arg){
+        return arg !== value;
+       }, "Value must not equal arg.");
+
 
     $(".add-info-form").validate({
         rules: {
             accountName: {
                 required: true,
                 minlength: 3
-            }
-            //   name : {
-            //     required: true,
-            //     minlength: 3
-            //   },
-            //   age: {
-            //     required: true,
-            //     number: true,
-            //     min: 18
-            //   },
-            //   email: {
-            //     required: true,
-            //     email: true
-            //   },
-            //   weight: {
-            //     required: {
-            //       depends: function(elem) {
-            //         return $("#age").val() > 50
-            //       }
-            //     },
-            //     number: true,
-            //     min: 0
-            //   }
+            },
+            outstandingLoan: {
+                number: true,
+                max: $("#loan-given").val()
+            },
+            accountType: { valueNotEquals: "choose" }
         },
+
         messages: {
             accountName: {
                 required: "يرجى ادخال اسم تعريفي للحساب",
                 minlength: "يجب ان يتضمن ثلالة احرف فأكثر"
-            }
-            //   name: {
-            //     minlength: "Name should be at least 3 characters"
-            //   },
-            //   age: {
-            //     required: "Please enter your age",
-            //     number: "Please enter your age as a numerical value",
-            //     min: "You must be at least 18 years old"
-            //   },
-            //   email: {
-            //     email: "The email should be in the format: abc@domain.tld"
-            //   },
-            //   weight: {
-            //     required: "People with age over 50 have to enter their weight",
-            //     number: "Please enter your weight as a numerical value"
-            //   }
+            } ,
+            outstandingLoan: {
+                max: "الرجاء اضافة رصيد القرض القائم أقل من أو يساوي قيمة القرض الممنوح",
+            },
+            accountType:{ valueNotEquals: "يرجى اختيار نوع للحساب" }
+        }
+    });
+    $('.add-info-form').on('submit', function(e){
+        e.preventDefault();
+        if($(".add-info-form").valid()){
+            $('#collapseTwo').collapse();
         }
     });
 });

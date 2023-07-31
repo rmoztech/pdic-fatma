@@ -1481,8 +1481,6 @@ input {
       }
     }
 
-
-
     .add-info-form {
 
       >div,
@@ -1521,18 +1519,21 @@ input {
           display: block;
         }
 
-        input.error {
+        input.error,
+        select.error {
           border: 1px dashed red;
           font-weight: 300;
           color: red;
-    
+
           +label {
             color: red !important;
             margin-top: 5px;
             padding: 0 10px;
+            width: 30%;
           }
-    
+
         }
+
         @include devices(mobile) {
           display: block;
 
@@ -1544,20 +1545,60 @@ input {
           select {
             width: 100%;
           }
-        }
 
-      }
-
-      h5,
-      p {
-        font-weight: 600;
-
-        &.note {
-          color: $mainColor;
-          font-weight: 500;
+          input.error {
+            +label {
+              width: 100%;
+            }
+          }
         }
       }
 
+
+    }
+
+    .report-info {
+      >div:not(:first-child) {
+        text-align: center;
+      }
+
+      @include devices(mobile) {
+        >div {
+          width: 100%;
+
+          &:not(:first-child) {
+            text-align: right;
+          }
+        }
+      }
+
+    }
+
+    .another-info {
+
+      h5 {
+        width: 53%;
+      }
+
+      @include devices(mobile) {
+        h5 {
+          width: 100%;
+
+          // &:not(:first-child) {
+          //   text-align: right;
+          // }
+        }
+      }
+    }
+
+    h5,
+    p {
+      font-weight: 600;
+
+      &.note {
+        color: $mainColor;
+        font-weight: 500;
+      }
     }
 
   }
