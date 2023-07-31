@@ -1254,25 +1254,6 @@ input {
     width: 100%;
   }
 }
-.calculator-page .content-inner .report-info > div:not(:first-child) {
-  text-align: center;
-}
-@media only screen and (max-width: 481px) {
-  .calculator-page .content-inner .report-info > div {
-    width: 100%;
-  }
-  .calculator-page .content-inner .report-info > div:not(:first-child) {
-    text-align: right;
-  }
-}
-.calculator-page .content-inner .another-info h5 {
-  width: 53%;
-}
-@media only screen and (max-width: 481px) {
-  .calculator-page .content-inner .another-info h5 {
-    width: 100%;
-  }
-}
 .calculator-page .content-inner h5,
 .calculator-page .content-inner p {
   font-weight: 600;
@@ -1281,4 +1262,36 @@ input {
 .calculator-page .content-inner p.note {
   color: #09438B;
   font-weight: 500;
+}
+
+.print-page {
+  padding: 50px 200px;
+}
+.print-page h5,
+.print-page p {
+  font-weight: 600;
+}
+.print-page h5.note,
+.print-page p.note {
+  color: #09438B;
+  font-weight: 500;
+}
+.print-page .report-info > div:not(:first-child) {
+  text-align: center;
+}
+@media only screen and (max-width: 481px) {
+  .print-page .report-info > div {
+    width: 100%;
+  }
+  .print-page .report-info > div:not(:first-child) {
+    text-align: right;
+  }
+}
+.print-page .another-info h5 {
+  width: 53%;
+}
+@media only screen and (max-width: 481px) {
+  .print-page .another-info h5 {
+    width: 100%;
+  }
 }/*# sourceMappingURL=style.css.map */

@@ -1557,39 +1557,7 @@ input {
 
     }
 
-    .report-info {
-      >div:not(:first-child) {
-        text-align: center;
-      }
 
-      @include devices(mobile) {
-        >div {
-          width: 100%;
-
-          &:not(:first-child) {
-            text-align: right;
-          }
-        }
-      }
-
-    }
-
-    .another-info {
-
-      h5 {
-        width: 53%;
-      }
-
-      @include devices(mobile) {
-        h5 {
-          width: 100%;
-
-          // &:not(:first-child) {
-          //   text-align: right;
-          // }
-        }
-      }
-    }
 
     h5,
     p {
@@ -1601,5 +1569,50 @@ input {
       }
     }
 
+  }
+
+}
+
+.print-page {
+  padding: 50px 200px;
+
+  h5,
+  p {
+    font-weight: 600;
+
+    &.note {
+      color: $mainColor;
+      font-weight: 500;
+    }
+  }
+
+  .report-info {
+    >div:not(:first-child) {
+      text-align: center;
+    }
+
+    @include devices(mobile) {
+      >div {
+        width: 100%;
+
+        &:not(:first-child) {
+          text-align: right;
+        }
+      }
+    }
+
+  }
+
+  .another-info {
+
+    h5 {
+      width: 53%;
+    }
+
+    @include devices(mobile) {
+      h5 {
+        width: 100%;
+      }
+    }
   }
 }

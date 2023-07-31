@@ -238,10 +238,9 @@ $(document).ready(function () {
         $(".add-info-form").find("input, select").val("");
     });
 
-    $.validator.addMethod("valueNotEquals", function(value, element, arg){
+    $.validator.addMethod("valueNotEquals", function (value, element, arg) {
         return arg !== value;
-       }, "Value must not equal arg.");
-
+    }, "Value must not equal arg.");
 
     $(".add-info-form").validate({
         rules: {
@@ -260,18 +259,23 @@ $(document).ready(function () {
             accountName: {
                 required: "يرجى ادخال اسم تعريفي للحساب",
                 minlength: "يجب ان يتضمن ثلالة احرف فأكثر"
-            } ,
+            },
             outstandingLoan: {
                 max: "الرجاء اضافة رصيد القرض القائم أقل من أو يساوي قيمة القرض الممنوح",
             },
-            accountType:{ valueNotEquals: "يرجى اختيار نوع للحساب" }
+            accountType: { valueNotEquals: "يرجى اختيار نوع للحساب" }
         }
     });
-    $('.add-info-form').on('submit', function(e){
+    $('.add-info-form').on('submit', function (e) {
         e.preventDefault();
-        if($(".add-info-form").valid()){
+        if ($(".add-info-form").valid()) {
             $('#collapseTwo').collapse();
         }
     });
+
+    // $(function() {
+    //     $('[data-bs-toggle="tooltip"]').tooltip();
+    //   });
+
 });
 
