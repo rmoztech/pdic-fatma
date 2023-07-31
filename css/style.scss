@@ -1557,7 +1557,33 @@ input {
 
     }
 
+    .report-info {
+      >div:not(:first-child) {
+        text-align: center;
+      }
 
+      @include devices(mobile) {
+        >div {
+          width: 100%;
+
+          &:not(:first-child) {
+            text-align: right;
+          }
+        }
+      }
+    }
+
+    .another-info {
+      h5 {
+        width: 53%;
+      }
+
+      @include devices(mobile) {
+        h5 {
+          width: 100%;
+        }
+      }
+    }
 
     h5,
     p {
@@ -1600,11 +1626,9 @@ input {
         }
       }
     }
-
   }
 
   .another-info {
-
     h5 {
       width: 53%;
     }
