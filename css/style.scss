@@ -83,6 +83,10 @@ i {
   }
 }
 
+input {
+  text-align: right;
+}
+
 .body-overlay {
   position: fixed;
   height: 100%;
@@ -352,7 +356,6 @@ i {
     .join-us {
       .email-input {
         width: 65%;
-        text-align: right;
         border: 1px solid $borderColor;
         font-size: 13px;
         padding: 7px 15px;
@@ -446,8 +449,6 @@ i {
     }
 
     .logo {
-
-      // padding: 10px 0;
       img {
         max-height: 90px;
       }
@@ -483,7 +484,7 @@ i {
             right: 50%;
             display: block;
             position: relative;
-            background-color: #09438B;
+            background-color: $mainColor;
             transition: all 0.3s ease-in-out;
           }
 
@@ -613,9 +614,17 @@ i {
         width: 33%;
         height: 100%;
 
-        img {
+        a {
+          display: flex;
+          align-items: center;
+          justify-content: center;
           height: 100%;
+
+          img {
+            height: 140%;
+          }
         }
+
       }
 
       .menu-list {
@@ -852,7 +861,7 @@ i {
 
     .currency-list {
       border-radius: 4px;
-      background: linear-gradient(to bottom, #A3BDDF 0%, #09438BFC 99%);
+      background: linear-gradient(to bottom, #A3BDDF 0%, $mainColor 99%);
       margin: 0 15px 30px;
       font-weight: $font-weight-300;
 
@@ -1232,7 +1241,6 @@ i {
         color: $grayLightColor;
         font-size: 14px;
         height: 40px;
-        text-align: right;
 
         &::placeholder {
           color: $grayLightColor;
@@ -1361,7 +1369,6 @@ i {
           opacity: 0;
           position: absolute;
           right: 0px;
-          text-align: right;
           top: 0px;
           z-index: 1;
         }
@@ -1409,6 +1416,149 @@ i {
       }
     }
   }
+}
+
+/*===================
+	Start calculator page style 
+=====================*/
+.calculator-page {
+  .content-inner {
+    width: 100%;
+    color: $grayLightColor;
+
+    .methode-calculation {
+      h4 {
+        font-weight: $font-weight-700;
+        color: $grayDarkColor
+      }
+
+      p {
+        line-height: 2;
+        text-align: justify;
+      }
+    }
+
+    .accordion {
+      .accordion-item {
+        border: none;
+
+        .accordion-button {
+          background: linear-gradient(180deg, $mainColor 0%, rgba(9, 67, 139, 0.71) 100%);
+          outline: none;
+          color: $whiteColor !important;
+          padding-right: 60px;
+          position: relative;
+
+          &::after {
+            content: '\f078';
+            font-family: 'FontAwesome';
+            float: right;
+            background-image: none;
+            position: absolute;
+            right: 22px;
+          }
+
+          &:not(.collapsed)::after {
+            background-image: none;
+
+          }
 
 
+        }
+
+        .accordion-body {
+          padding: 40px;
+          padding-bottom: 0;
+
+          .btn-bg {
+            margin-left: 10px;
+          }
+        }
+
+        .form-body {
+          padding-bottom: 20px;
+        }
+      }
+    }
+
+
+
+    .add-info-form {
+
+      >div,
+      .form-body>div,
+      .for-company-select>div,
+      .subscribers-names>div {
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        flex-wrap: wrap;
+
+        label {
+          font-weight: 500;
+          width: 20%;
+          color: $textColor;
+        }
+
+        input,
+        select {
+          width: 35%;
+        }
+
+        input[type="radio"] {
+          width: 15px;
+          height: 15px;
+          cursor: pointer;
+
+          +label {
+            width: 100%;
+          }
+        }
+
+        &.form-body,
+        .for-company-select,
+        .subscribers-names {
+          display: block;
+        }
+
+        input.error {
+          border: 1px dashed red;
+          font-weight: 300;
+          color: red;
+    
+          +label {
+            color: red !important;
+            margin-top: 5px;
+            padding: 0 10px;
+          }
+    
+        }
+        @include devices(mobile) {
+          display: block;
+
+          label {
+            width: 100%;
+          }
+
+          input,
+          select {
+            width: 100%;
+          }
+        }
+
+      }
+
+      h5,
+      p {
+        font-weight: 600;
+
+        &.note {
+          color: $mainColor;
+          font-weight: 500;
+        }
+      }
+
+    }
+
+  }
 }

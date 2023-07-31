@@ -156,6 +156,138 @@ $(document).ready(function () {
         $(".filename").text(e.target.files[0].name);
     });
 
+    $(".form-body").hide();
+    $(".sorry").hide();
+    $(".for-subscribers").hide();
+    $(".subscribers-names").hide();
 
+    $('input[name="account"]').change(function () {
+        if ($(this).val() == 'personnel') {
+            $(".sorry").hide();
+            $(".for-company").hide();
+            $(".form-body").show();
+            $(".for-company-select").show();
+            $(".account-name").text("حسابات الأفراد");
+            $(".for-personal").show();
+
+            $("select.account-type").change(function () {
+                var selectedAccount = $(this).children("option:selected").val();
+                if (selectedAccount == 'partenter') {
+                    $(".for-subscribers").show();
+                    $(".subscribers-names").show();
+                    $('#subscribers-number').change(function () {
+                        var subscribersNumber = $(this).val();
+                        var divOwners = $('.subscribers-names');
+                        divOwners.empty();
+                        for (var i = 0; i < subscribersNumber; i++) {
+                            divOwners.append(`<div class="mb-4">
+                            <label class="  mb-3">
+                            اسم المالك
+                            ${i + 1}
+                            </label>
+                            <input type="text" class="form-control" id="owner-name">
+                            </div>`)
+                        }
+                        subscribersNumber = 0
+                    })
+                }
+                else {
+                    $(".for-subscribers").hide();
+                    $(".subscribers-names").hide();
+
+                }
+            });
+        } else if ($(this).val() == 'companies') {
+            $(".sorry").hide();
+            $(".for-subscribers").hide();
+            $(".for-personal").hide();
+            $(".for-company-select").hide();
+            $(".subscribers-names").hide();
+            $(".account-name").text("حسابات الشركات");
+            $(".form-body").show();
+            $(".for-company").show();
+            $("select.company-type").change(function () {
+                var selectedCompany = $(this).children("option:selected").val();
+                if (selectedCompany == 'other') {
+                    $(".for-company-select").show();
+                    $(".sorry").hide();
+                }
+                else {
+                    $(".for-company-select").hide();
+                    $(".sorry").show();
+                }
+            });
+        }
+        else if ($(this).val() == 'governmental') {
+            $(".form-body").hide();
+            $(".account-name").text("حسابات حكومية");
+            $(".sorry").show();
+        }
+        else {
+            $(".form-body").hide();
+
+            $(".account-name").text("حسابات ذوي الصله");
+            $(".sorry").show();
+        }
+    });
+
+    $(".refresh").click(function(){
+        location.reload(true);
+    })
+    $(".reset").click(function() {
+        $(".add-info-form").find("input, select").val("");
+    });
+
+    $(".add-info-form").validate({
+        rules: {
+            accountName: {
+                required: true,
+                minlength: 3
+            }
+            //   name : {
+            //     required: true,
+            //     minlength: 3
+            //   },
+            //   age: {
+            //     required: true,
+            //     number: true,
+            //     min: 18
+            //   },
+            //   email: {
+            //     required: true,
+            //     email: true
+            //   },
+            //   weight: {
+            //     required: {
+            //       depends: function(elem) {
+            //         return $("#age").val() > 50
+            //       }
+            //     },
+            //     number: true,
+            //     min: 0
+            //   }
+        },
+        messages: {
+            accountName: {
+                required: "يرجى ادخال اسم تعريفي للحساب",
+                minlength: "يجب ان يتضمن ثلالة احرف فأكثر"
+            }
+            //   name: {
+            //     minlength: "Name should be at least 3 characters"
+            //   },
+            //   age: {
+            //     required: "Please enter your age",
+            //     number: "Please enter your age as a numerical value",
+            //     min: "You must be at least 18 years old"
+            //   },
+            //   email: {
+            //     email: "The email should be in the format: abc@domain.tld"
+            //   },
+            //   weight: {
+            //     required: "People with age over 50 have to enter their weight",
+            //     number: "Please enter your weight as a numerical value"
+            //   }
+        }
+    });
 });
 

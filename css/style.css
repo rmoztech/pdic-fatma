@@ -71,6 +71,10 @@ i[class*=fa-chevron] {
   font-size: 12px;
 }
 
+input {
+  text-align: right;
+}
+
 .body-overlay {
   position: fixed;
   height: 100%;
@@ -292,7 +296,6 @@ i[class*=fa-chevron] {
 }
 .sidebar .sidebar-box .join-us .email-input {
   width: 65%;
-  text-align: right;
   border: 1px solid #D0D0D0;
   font-size: 13px;
   padding: 7px 15px;
@@ -493,8 +496,14 @@ i[class*=fa-chevron] {
     width: 33%;
     height: 100%;
   }
-  .header .header-inner .logo img {
+  .header .header-inner .logo a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     height: 100%;
+  }
+  .header .header-inner .logo a img {
+    height: 140%;
   }
   .header .header-inner .menu-list {
     display: none;
@@ -688,7 +697,7 @@ i[class*=fa-chevron] {
 }
 .numbers .currency-box .currency-list {
   border-radius: 4px;
-  background: linear-gradient(to bottom, #A3BDDF 0%, rgba(9, 67, 139, 0.9882352941) 99%);
+  background: linear-gradient(to bottom, #A3BDDF 0%, #09438B 99%);
   margin: 0 15px 30px;
   font-weight: 300;
 }
@@ -955,7 +964,6 @@ i[class*=fa-chevron] {
   color: #666666;
   font-size: 14px;
   height: 40px;
-  text-align: right;
 }
 .contact-page .content-inner .suggestions input::placeholder {
   color: #666666;
@@ -1054,7 +1062,6 @@ i[class*=fa-chevron] {
   opacity: 0;
   position: absolute;
   right: 0px;
-  text-align: right;
   top: 0px;
   z-index: 1;
 }
@@ -1089,4 +1096,155 @@ i[class*=fa-chevron] {
   -webkit-line-clamp: 1;
   height: auto;
   font-size: 17px;
+}
+
+/*===================
+	Start calculator page style 
+=====================*/
+.calculator-page .content-inner {
+  width: 100%;
+  color: #666666;
+}
+.calculator-page .content-inner .methode-calculation h4 {
+  font-weight: 700;
+  color: #333434;
+}
+.calculator-page .content-inner .methode-calculation p {
+  line-height: 2;
+  text-align: justify;
+}
+.calculator-page .content-inner .accordion .accordion-item {
+  border: none;
+}
+.calculator-page .content-inner .accordion .accordion-item .accordion-button {
+  background: linear-gradient(180deg, #09438B 0%, rgba(9, 67, 139, 0.71) 100%);
+  outline: none;
+  color: #fff !important;
+  padding-right: 60px;
+  position: relative;
+}
+.calculator-page .content-inner .accordion .accordion-item .accordion-button::after {
+  content: "\f078";
+  font-family: "FontAwesome";
+  float: right;
+  background-image: none;
+  position: absolute;
+  right: 22px;
+}
+.calculator-page .content-inner .accordion .accordion-item .accordion-button:not(.collapsed)::after {
+  background-image: none;
+}
+.calculator-page .content-inner .accordion .accordion-item .accordion-body {
+  padding: 40px;
+  padding-bottom: 0;
+}
+.calculator-page .content-inner .accordion .accordion-item .accordion-body .btn-bg {
+  margin-left: 10px;
+}
+.calculator-page .content-inner .accordion .accordion-item .form-body {
+  padding-bottom: 20px;
+}
+.calculator-page .content-inner .add-info-form > div,
+.calculator-page .content-inner .add-info-form .form-body > div,
+.calculator-page .content-inner .add-info-form .for-company-select > div,
+.calculator-page .content-inner .add-info-form .subscribers-names > div {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  flex-wrap: wrap;
+}
+.calculator-page .content-inner .add-info-form > div label,
+.calculator-page .content-inner .add-info-form .form-body > div label,
+.calculator-page .content-inner .add-info-form .for-company-select > div label,
+.calculator-page .content-inner .add-info-form .subscribers-names > div label {
+  font-weight: 500;
+  width: 20%;
+  color: #3D464D;
+}
+.calculator-page .content-inner .add-info-form > div input,
+.calculator-page .content-inner .add-info-form > div select,
+.calculator-page .content-inner .add-info-form .form-body > div input,
+.calculator-page .content-inner .add-info-form .form-body > div select,
+.calculator-page .content-inner .add-info-form .for-company-select > div input,
+.calculator-page .content-inner .add-info-form .for-company-select > div select,
+.calculator-page .content-inner .add-info-form .subscribers-names > div input,
+.calculator-page .content-inner .add-info-form .subscribers-names > div select {
+  width: 35%;
+}
+.calculator-page .content-inner .add-info-form > div input[type=radio],
+.calculator-page .content-inner .add-info-form .form-body > div input[type=radio],
+.calculator-page .content-inner .add-info-form .for-company-select > div input[type=radio],
+.calculator-page .content-inner .add-info-form .subscribers-names > div input[type=radio] {
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+}
+.calculator-page .content-inner .add-info-form > div input[type=radio] + label,
+.calculator-page .content-inner .add-info-form .form-body > div input[type=radio] + label,
+.calculator-page .content-inner .add-info-form .for-company-select > div input[type=radio] + label,
+.calculator-page .content-inner .add-info-form .subscribers-names > div input[type=radio] + label {
+  width: 100%;
+}
+.calculator-page .content-inner .add-info-form > div.form-body,
+.calculator-page .content-inner .add-info-form > div .for-company-select,
+.calculator-page .content-inner .add-info-form > div .subscribers-names,
+.calculator-page .content-inner .add-info-form .form-body > div.form-body,
+.calculator-page .content-inner .add-info-form .form-body > div .for-company-select,
+.calculator-page .content-inner .add-info-form .form-body > div .subscribers-names,
+.calculator-page .content-inner .add-info-form .for-company-select > div.form-body,
+.calculator-page .content-inner .add-info-form .for-company-select > div .for-company-select,
+.calculator-page .content-inner .add-info-form .for-company-select > div .subscribers-names,
+.calculator-page .content-inner .add-info-form .subscribers-names > div.form-body,
+.calculator-page .content-inner .add-info-form .subscribers-names > div .for-company-select,
+.calculator-page .content-inner .add-info-form .subscribers-names > div .subscribers-names {
+  display: block;
+}
+.calculator-page .content-inner .add-info-form > div input.error,
+.calculator-page .content-inner .add-info-form .form-body > div input.error,
+.calculator-page .content-inner .add-info-form .for-company-select > div input.error,
+.calculator-page .content-inner .add-info-form .subscribers-names > div input.error {
+  border: 1px dashed red;
+  font-weight: 300;
+  color: red;
+}
+.calculator-page .content-inner .add-info-form > div input.error + label,
+.calculator-page .content-inner .add-info-form .form-body > div input.error + label,
+.calculator-page .content-inner .add-info-form .for-company-select > div input.error + label,
+.calculator-page .content-inner .add-info-form .subscribers-names > div input.error + label {
+  color: red !important;
+  margin-top: 5px;
+  padding: 0 10px;
+}
+@media only screen and (max-width: 481px) {
+  .calculator-page .content-inner .add-info-form > div,
+  .calculator-page .content-inner .add-info-form .form-body > div,
+  .calculator-page .content-inner .add-info-form .for-company-select > div,
+  .calculator-page .content-inner .add-info-form .subscribers-names > div {
+    display: block;
+  }
+  .calculator-page .content-inner .add-info-form > div label,
+  .calculator-page .content-inner .add-info-form .form-body > div label,
+  .calculator-page .content-inner .add-info-form .for-company-select > div label,
+  .calculator-page .content-inner .add-info-form .subscribers-names > div label {
+    width: 100%;
+  }
+  .calculator-page .content-inner .add-info-form > div input,
+  .calculator-page .content-inner .add-info-form > div select,
+  .calculator-page .content-inner .add-info-form .form-body > div input,
+  .calculator-page .content-inner .add-info-form .form-body > div select,
+  .calculator-page .content-inner .add-info-form .for-company-select > div input,
+  .calculator-page .content-inner .add-info-form .for-company-select > div select,
+  .calculator-page .content-inner .add-info-form .subscribers-names > div input,
+  .calculator-page .content-inner .add-info-form .subscribers-names > div select {
+    width: 100%;
+  }
+}
+.calculator-page .content-inner .add-info-form h5,
+.calculator-page .content-inner .add-info-form p {
+  font-weight: 600;
+}
+.calculator-page .content-inner .add-info-form h5.note,
+.calculator-page .content-inner .add-info-form p.note {
+  color: #09438B;
+  font-weight: 500;
 }/*# sourceMappingURL=style.css.map */
