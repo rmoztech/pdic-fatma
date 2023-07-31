@@ -1561,7 +1561,6 @@ input {
       >div:not(:first-child) {
         text-align: center;
       }
-
       @include devices(mobile) {
         >div {
           width: 100%;
