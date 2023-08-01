@@ -18,20 +18,21 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800&display=swap"
         rel="stylesheet">
-    <!-- Bootstrap CSS -->
+    <!--  load Bootstrap CSS  -->
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/bootstrap.rtl.css">
+    <!--  load font awesome CSS  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!--  load owl carousel CSS  -->
     <link href="../css/owl.carousel.css" rel="stylesheet">
     <link href="../css/owl.theme.default.min.css" rel="stylesheet">
-    <!-- Medipro CSS -->
+    <!-- load style CSS -->
     <link rel="stylesheet" href="../css/style.css">
 </head>
 
 <body>
-    <!-- Preloader -->
-    <!-- Header Area -->
-    <header class="header subpage-header">
+     <!-- Header Area -->
+     <header class="header subpage-header">
         <!-- Header Top-->
         <div class="header-top"></div>
         <!-- Header Inner -->
@@ -41,7 +42,7 @@
             </div>
             <!-- logo -->
             <div class="logo text-center">
-                <a href="../index.html" title="المؤسسة الفلسطينية لضمان الودائع">
+                <a href="./index.html" title="المؤسسة الفلسطينية لضمان الودائع">
                     <img src="../img/logoo.svg" alt="">
                 </a>
             </div>
@@ -49,7 +50,7 @@
             <div class="menu-list">
                 <ul class="nav">
                     <li class="nav-item active">
-                        <a href="../index.html">
+                        <a href="./index.html">
                             الرئيسية
                         </a>
                     </li>
@@ -59,7 +60,7 @@
                             <i class="fa-solid fa-chevron-down"></i>
                         </a>
                         <ul class="dropdown-list">
-                            <li><a href="#" target="_self">النشأة والرؤية والرسالة </a></li>
+                            <li><a href="./pages/portfalio.html" target="_self">النشأة والرؤية والرسالة </a></li>
                             <li><a href="#" target="_self">أهداف المؤسسة</a></li>
                             <li><a href="#" target="_self">الهيكل التنظيمي</a></li>
                         </ul>
@@ -75,7 +76,7 @@
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a href="./releases.html">
+                        <a href="./pages/releases.html">
                             الإصدارات
                         </a>
                     </li>
@@ -85,7 +86,7 @@
                             <i class="fa-solid fa-chevron-down"></i>
                         </a>
                         <ul class="dropdown-list">
-                            <li><a href="#" target="_self">بيانات ضمان الودائع</a></li>
+                            <li><a href="./pages/depositTable.html" target="_self">بيانات ضمان الودائع</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">
@@ -123,7 +124,7 @@
                     <input type="text" class="search-field" placeholder="بحث..." name="search" value="">
                 </div>
                 <div>
-                    <button class="btn submit-btn">
+                    <button class="btn submit-btn" type="submit">
                         <i class="fa-solid fa-magnifying-glass"></i>
                     </button>
                 </div>
@@ -131,41 +132,42 @@
         </form>
     </div>
     <!-- Mobile Navbar -->
-    <div class="mobile-navbar d-flex align-items-center justify-content-center">
-        <div class="w-100 p-5">
+    <div class="mobile-navbar">
+        <div class="w-100">
             <div class="close-btn d-flex align-items-center justify-content-end mb-4">
                 <button class="btn">
                     <i class="fa-solid fa-xmark"></i>
                 </button>
             </div>
-            <div class="search-box px-3 my-5">
+            <div class="search-box px-5 my-5">
                 <form action="" class="search-form" method="">
                     <div class="d-flex search-input-btn w-100">
                         <div class="flex-grow-1">
                             <input type="text" class="search-field" placeholder="بحث..." name="search" value="">
                         </div>
                         <div>
-                            <button class="btn submit-btn">
+                            <button class="btn submit-btn" type="submit">
                                 <i class="fa-solid fa-magnifying-glass"></i>
                             </button>
                         </div>
                     </div>
                 </form>
             </div>
-            <div class="mobile-menu-list">
+            <div class="menu-list">
                 <ul class="nav">
                     <li class="nav-item active">
-                        <a href="../index.html">
+                        <a href="./index.html">
                             الرئيسية
                         </a>
                     </li>
+
                     <li class="nav-item has-dropdown">
                         <a href="#">
                             حول المؤسسة
                             <i class="fa-solid fa-chevron-down"></i>
                         </a>
                         <ul class="dropdown-list">
-                            <li><a href="#" target="_self">النشأة والرؤية والرسالة </a></li>
+                            <li><a href="./pages/portfalio.html" target="_self">النشأة والرؤية والرسالة </a></li>
                             <li><a href="#" target="_self">أهداف المؤسسة</a></li>
                             <li><a href="#" target="_self">الهيكل التنظيمي</a></li>
                         </ul>
@@ -181,7 +183,7 @@
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a href="./releases.html">
+                        <a href="./pages/releases.html">
                             الإصدارات
                         </a>
                     </li>
@@ -191,7 +193,7 @@
                             <i class="fa-solid fa-chevron-down"></i>
                         </a>
                         <ul class="dropdown-list">
-                            <li><a href="#" target="_self">بيانات ضمان الودائع</a></li>
+                            <li><a href="./pages/depositTable.html" target="_self">بيانات ضمان الودائع</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">
@@ -204,15 +206,10 @@
                             القيم الجوهرية
                         </a>
                     </li>
-                    <li class="nav-item searching">
-                        <a href="#">
-                            <i class="fa-solid fa-magnifying-glass"></i>
-                        </a>
-                    </li>
                 </ul>
             </div>
-            <div class="social-media">
-                <ul class="social-list">
+            <div class="social-media mt-4">
+                <ul class="social-list text-center">
                     <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
                     <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
                     <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
@@ -222,7 +219,7 @@
         </div>
     </div>
     <!-- page content -->
-    <div class="adverts-page container">
+    <div class="adverts-page container mt-page">
         <div class="page-header">
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
@@ -232,7 +229,7 @@
             </nav>
         </div>
         <div class="page-content d-flex align-items-start justify-content-between flex-wrap">
-            <div class="content-inner">
+            <div class="content-inner w-100">
                 <div class="card new-card mb-4">
                     <div class="row g-0">
                         <div class="col-md-4 new-card-img">
@@ -591,10 +588,16 @@
     </section>
     <!-- End page content -->
 
-    <!-- jquery Min JS -->
-    <script src="../js/jquery.min.js"></script>
-    <script src="../js/bootstrap.min.js"></script>
+   <!--  load jQuery  -->
+   <script src="../js/jquery.min.js"></script>
+   <!--  load owl carousel.  -->
     <script src="../js/owl.carousel.min.js"></script>
+    <!--  load popper.js  -->
+    <script src="../js/popper.js"></script>
+    <!--  load bootstrap js  -->
+    <script src="../js/bootstrap.min.js"></script>
+    <!--  load jquery validate js  -->
+    <script src="../js/jquery.validate.min.js"></script>
     <!-- Main JS -->
     <script src="../js/main.js"></script>
 </body>

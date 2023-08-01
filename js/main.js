@@ -1,4 +1,12 @@
 $(document).ready(function () {
+    $(window).scroll(function () {
+        const currentScroll = window.pageYOffset;
+        if (currentScroll > 150) {
+            $(".header").addClass("is-sticky");
+        } else {
+            $(".header").removeClass("is-sticky");
+        }
+    });
     $('.searching').click(function () {
         $('.body-overlay, .serach-box').show();
         $('.serach-box, .body-overlay').animate({
@@ -11,6 +19,20 @@ $(document).ready(function () {
         $('.serach-box, .body-overlay').animate({
             opacity: '1',
         })
+    })
+    $('.mobile-navbar .has-dropdown').click(function () {
+        $(this).find(".dropdown-list").toggle();
+        var rot = 180;
+        $(this).find("i").css({ transform: 'rotate(' + rot + 'deg)' });
+        rot += 90
+    })
+    $('.close-btn').click(function () {
+        $('.mobile-navbar').css({ display: ' none' });
+        console.log('dfklhjsdlfjhsafdhjkl')
+
+    })
+    $('.menu-btn').click(function () {
+        $('.mobile-navbar').css({ display : 'block' })
     })
     $(function () {
         $.fn.countTo = function (options) {
@@ -247,6 +269,10 @@ $(document).ready(function () {
         return arg !== value;
     }, "Value must not equal arg.");
 
+    $.validator.addMethod('le', function (value, element, param) {
+        return this.optional(element) || value <= $(param).val();
+    }, 'Invalid value');
+
     $(".add-info-form").validate({
         rules: {
             accountName: {
@@ -255,7 +281,7 @@ $(document).ready(function () {
             },
             outstandingLoan: {
                 number: true,
-                max: $("#loan-given").val()
+                le: '#loan-given'
             },
             accountType: { valueNotEquals: "choose" }
         },
@@ -265,9 +291,7 @@ $(document).ready(function () {
                 required: "يرجى ادخال اسم تعريفي للحساب",
                 minlength: "يجب ان يتضمن ثلالة احرف فأكثر"
             },
-            outstandingLoan: {
-                max: "الرجاء اضافة رصيد القرض القائم أقل من أو يساوي قيمة القرض الممنوح",
-            },
+            outstandingLoan: { le: 'الرجاء اضافة رصيد القرض القائم أقل من أو يساوي قيمة القرض الممنوح' },
             accountType: { valueNotEquals: "يرجى اختيار نوع للحساب" }
         }
     });
@@ -278,5 +302,10 @@ $(document).ready(function () {
             $(".for-one-person").show();
         }
     });
+
+    var tooltipTriggerList = [].slice.call($('[data-bs-toggle="tooltip"]'))
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl)
+    })
 });
 
