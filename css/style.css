@@ -1016,6 +1016,12 @@ input {
   color: #09438B;
   font-weight: 600;
 }
+.contact-page .content-inner .contact-info a {
+  color: #333434;
+}
+.contact-page .content-inner .contact-info a:hover {
+  color: #09438B;
+}
 .contact-page .content-inner .follow-us .social-list li a {
   height: 40px;
   width: 40px;

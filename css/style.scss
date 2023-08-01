@@ -1301,6 +1301,12 @@ input {
         color: $mainColor;
         font-weight: 600;
       }
+      a{
+        color: $grayDarkColor;
+        &:hover{
+          color: $mainColor;
+        }
+      }
 
     }
 
