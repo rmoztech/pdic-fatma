@@ -160,6 +160,10 @@ $(document).ready(function () {
     $(".sorry").hide();
     $(".for-subscribers").hide();
     $(".subscribers-names").hide();
+    $(".for-one-person").hide();
+    $(".for-sum-persons").hide();
+    $(".for-one-person h5").hide();
+
 
     $('input[name="account"]').change(function () {
         if ($(this).val() == 'personnel') {
@@ -188,13 +192,14 @@ $(document).ready(function () {
                             <input type="text" class="form-control" id="owner-name">
                             </div>`)
                         }
-                        subscribersNumber = 0
+                        subscribersNumber = 0;
+                        $(".for-one-person h5").show();
+                        $(".for-sum-persons").show();
                     })
                 }
                 else {
                     $(".for-subscribers").hide();
                     $(".subscribers-names").hide();
-
                 }
             });
         } else if ($(this).val() == 'companies') {
@@ -270,8 +275,8 @@ $(document).ready(function () {
         e.preventDefault();
         if ($(".add-info-form").valid()) {
             $('#collapseTwo').collapse();
+            $(".for-one-person").show();
         }
     });
-
 });
 

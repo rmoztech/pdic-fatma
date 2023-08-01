@@ -1557,33 +1557,43 @@ input {
 
     }
 
-    .report-info {
-      >div:not(:first-child) {
-        text-align: center;
-      }
-      @include devices(mobile) {
-        >div {
-          width: 100%;
+    .for-one-person {
+      .report-info {
+        >div:not(:first-child) {
+          text-align: center;
+        }
 
-          &:not(:first-child) {
-            text-align: right;
+        @include devices(mobile) {
+          >div {
+            width: 100%;
+
+            &:not(:first-child) {
+              text-align: right;
+            }
+          }
+        }
+      }
+
+      .another-info {
+        h6 {
+          width: 53%;
+        }
+
+        @include devices(mobile) {
+          h5 {
+            width: 100%;
           }
         }
       }
     }
 
-    .another-info {
-      h5 {
-        width: 53%;
-      }
 
-      @include devices(mobile) {
-        h5 {
-          width: 100%;
-        }
-      }
+    .for-sum-persons {
+      border-top: 1px solid $borderColor;
+      padding-top: 30px;
     }
 
+    h6,
     h5,
     p {
       font-weight: 600;
@@ -1601,6 +1611,7 @@ input {
 .print-page {
   padding: 50px 200px;
 
+  h6,
   h5,
   p {
     font-weight: 600;
@@ -1611,31 +1622,44 @@ input {
     }
   }
 
-  .report-info {
-    >div:not(:first-child) {
-      text-align: center;
+
+  .for-one-person-print,.for-sum-persons-print {
+    .report-info {
+      >div {
+        width: 33%;
+        &:not(:first-child) {
+          text-align: center;
+        }
+      }
+
+      @include devices(mobile) {
+        >div {
+          width: 100%;
+          &:not(:first-child) {
+            text-align: right;
+          }
+        }
+      }
     }
 
-    @include devices(mobile) {
-      >div {
-        width: 100%;
+    .another-info {
+      h6,span {
+        width: 33%;
+      }
 
-        &:not(:first-child) {
-          text-align: right;
+
+      @include devices(mobile) {
+        h5,span {
+          width: 100%;
         }
       }
     }
   }
 
-  .another-info {
-    h5 {
-      width: 53%;
-    }
 
-    @include devices(mobile) {
-      h5 {
-        width: 100%;
-      }
-    }
+  .for-sum-persons-print {
+    border-top: 1px solid $borderColor;
+    padding-top: 30px;
   }
+
 }

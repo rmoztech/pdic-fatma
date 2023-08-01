@@ -259,9 +259,14 @@
                                 <form action="" method="" class="add-info-form">
                                     <div class="mb-4">
                                         <label class="mb-md-0 mb-3">اسم البنك</label>
-                                        <select class="form-select" aria-label="Default select" disabled>
-                                            <option selected>اسم البنك</option>
+                                        <select class="form-select" aria-label="Default select">
                                             <option value="palestine-bank" selected>بنك فلسطين</option>
+                                            <option value="palestine-bank" >بنك العربي</option>
+                                            <option value="palestine-bank" >بنك الاردن</option>
+                                            <option value="palestine-bank" >بنك الاهلي</option>
+                                            <option value="palestine-bank" >البنك الاسلامي الفلسطيني</option>
+                                            <option value="palestine-bank" >بنك الإسكان</option>
+                                            <option value="palestine-bank" >بنك العقاري المصري</option>
                                         </select>
                                     </div>
                                     <div class="mb-4">
@@ -370,35 +375,56 @@
                         <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
                             data-bs-parent="#accordionExample">
                             <div class="accordion-body">
-                                <div class="report-info d-flex align-items-center justify-content-between flex-wrap mb-4">
-                                    <div>
-                                        <h5 class="mb-4">اسم الحساب</h5>
-                                        <span>اسم الحساب المدخل</span>
+                                <div class="for-one-person">
+                                    <h5 class="mb-4">المالك الاول </h5>
+                                    <div
+                                        class="report-info d-flex align-items-center justify-content-between flex-wrap mb-4">
+                                        <div>
+                                            <h6 class="mb-4">اسم الحساب</h6>
+                                            <span>اسم الحساب المدخل</span>
+                                        </div>
+                                        <div>
+                                            <h6 class="mb-4"> الودائع</h6>
+                                            <span> 87 <span>
+                                        </div>
+                                        <div>
+                                            <h6 class="mb-4">القروض </h6>
+                                            <span> 44</span>
+                                        </div>
                                     </div>
-                                    <div>
-                                        <h5 class="mb-4"> الودائع</h5>
-                                        <span> 87 <span>
-                                    </div>
-                                    <div>
-                                        <h5 class="mb-4">القروض </h5>
-                                        <span> 44</span>
+                                    <div class="mb-4">
+                                        <div class="another-info d-flex align-items-center justify-content-start">
+                                            <h6> مجموع الودائع</h6>
+                                            <span> 77</span>
+                                        </div>
+                                        <div class="another-info d-flex align-items-center justify-content-start">
+                                            <h6> صافي القروض</h6>
+                                            <span> 77</span>
+                                        </div>
+                                        <div class="another-info d-flex align-items-center justify-content-start">
+                                            <h6> قيمة الضمان</h6>
+                                            <span> 77</span>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="mb-4">
-                                    <div class="another-info d-flex align-items-center justify-content-start">
-                                        <h5> مجموع الودائع</h5>
-                                        <span> 77</span>
-                                    </div>
-                                    <div class="another-info d-flex align-items-center justify-content-start">
-                                        <h5>  صافي القروض</h5>
-                                        <span> 77</span>
-                                    </div>
-                                    <div class="another-info d-flex align-items-center justify-content-start">
-                                        <h5>  قيمة الضمان</h5>
-                                        <span> 77</span>
+                                <div class="for-sum-persons">
+                                    <h5 class="mb-4">المشتركين الاخرون</h5>
+                                    <div
+                                        class="report-info d-flex align-items-center justify-content-between flex-wrap mb-4">
+                                        <div>
+                                            <h6 class="mb-4">اسم </h6>
+                                            <span>اسم  </span>
+                                        </div>
+                                        <div>
+                                            <h6 class="mb-4"> الوديعة</h6>
+                                            <span> 87 <span>
+                                        </div>
+                                        <div>
+                                            <h6 class="mb-4">الضمان </h6>
+                                            <span> 44</span>
+                                        </div>
                                     </div>
                                 </div>
-
                                 <button class="btn-bg refresh" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                                     أضف حساب جديد
@@ -407,7 +433,8 @@
                                     data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                                     ابدأ من جديد
                                 </button>
-                                <a href="./print.html" class="btn-bg " data-bs-toggle="tooltip" title="Disabled tooltip">
+                                <a href="./print.html" class="btn-bg " data-bs-toggle="tooltip"
+                                    title="Disabled tooltip">
                                     طباعة التقرير
                                 </a>
                             </div>

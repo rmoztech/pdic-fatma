@@ -30,44 +30,65 @@
 
 <body>
     <div class="print-page">
-        <div class="report-info d-flex align-items-center justify-content-between flex-wrap mb-4">
-            <div>
-                <h5 class="mb-4">اسم الحساب</h5>
-                <span>اسم الحساب المدخل</span>
+        <div class="for-one-person-print">
+            <h5 class="mb-4">المالك الاول </h5>
+            <div class="report-info d-flex align-items-center justify-content-between flex-wrap mb-4">
+                <div>
+                    <h6 class="mb-4">اسم الحساب</h6>
+                    <span>اسم الحساب المدخل</span>
+                </div>
+                <div>
+                    <h6 class="mb-4"> الودائع</h6>
+                    <span> 87 <span>
+                </div>
+                <div>
+                    <h6 class="mb-4">القروض </h6>
+                    <span> 44</span>
+                </div>
             </div>
-            <div>
-                <h5 class="mb-4"> الودائع</h5>
-                <span> 87 <span>
-            </div>
-            <div>
-                <h5 class="mb-4">القروض </h5>
-                <span> 44</span>
+            <div class="mb-4">
+                <div class="another-info d-flex align-items-center justify-content-start">
+                    <h6> مجموع الودائع</h6>
+                    <span class="text-center"> 77</span>
+                </div>
+                <div class="another-info d-flex align-items-center justify-content-start">
+                    <h6> صافي القروض</h6>
+                    <span class="text-center"> 77</span>
+                </div>
+                <div class="another-info d-flex align-items-center justify-content-start">
+                    <h6> قيمة الضمان</h6>
+                    <span class="text-center"> 77</span>
+                </div>
             </div>
         </div>
-        
-        <div class="mb-4">
-            <div class="another-info d-flex align-items-center justify-content-start">
-                <h5> مجموع الودائع</h5>
-                <span> 77</span>
-            </div>
-            <div class="another-info d-flex align-items-center justify-content-start">
-                <h5> صافي القروض</h5>
-                <span> 77</span>
-            </div>
-            <div class="another-info d-flex align-items-center justify-content-start">
-                <h5> قيمة الضمان</h5>
-                <span> 77</span>
+        <div class="for-sum-persons-print">
+            <h5 class="mb-4">المشتركين الاخرون</h5>
+            <div class="report-info d-flex align-items-center justify-content-between flex-wrap mb-4">
+                <div>
+                    <h6 class="mb-4">اسم </h6>
+                    <span>اسم </span>
+                </div>
+                <div class="text-center">
+                    <h6 class="mb-4"> الوديعة</h6>
+                    <span> 87 <span>
+                </div>
+                <div class="text-center">
+                    <h6 class="mb-4">الضمان </h6>
+                    <span> 44</span>
+                </div>
             </div>
         </div>
     </div>
-  
-    
+
+
     <!-- End page content -->
 
     <!-- jquery Min JS -->
     <script src="../js/jquery.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
     <script src="../js/owl.carousel.min.js"></script>
+    <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
+
     <!-- Main JS -->
     <script src="../js/main.js"></script>
 </body>
