@@ -81,7 +81,7 @@ input {
   width: 100%;
   top: 0;
   right: 0;
-  z-index: 100;
+  z-index: 1000000;
   background-color: rgba(0, 0, 0, 0.568627451);
   opacity: 0;
   display: none;
@@ -453,6 +453,17 @@ input {
 }
 .social-list li:hover a {
   color: #333434;
+}
+
+.tooltip-inner {
+  background-color: #fff;
+  color: #333434;
+  border: 1px solid #D0D0D0;
+  opacity: 1 !important;
+}
+
+.tooltip.bs-tooltip-top .tooltip-arrow::before {
+  display: none;
 }
 
 /*===================
@@ -1404,13 +1415,26 @@ input {
   padding-top: 30px;
 }
 
-.tooltip-inner {
-  background-color: #fff;
+/*===================
+	Start print page style 
+=====================*/
+.advert-details-page .advert-details-header {
   color: #333434;
-  border: 1px solid #D0D0D0;
-  opacity: 1 !important;
+  text-align: center;
 }
-
-.tooltip.bs-tooltip-top .tooltip-arrow::before {
-  display: none;
+.advert-details-page .advert-details-header h3 {
+  font-weight: 700;
+}
+.advert-details-page .advert-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.advert-details-page .advert-img img {
+  width: 40%;
+}
+.advert-details-page .advert-details-content p {
+  font-size: 18px;
+  color: #666666;
+  text-align: justify;
 }/*# sourceMappingURL=style.css.map */

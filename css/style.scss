@@ -93,7 +93,7 @@ input {
   width: 100%;
   top: 0;
   right: 0;
-  z-index: 100;
+  z-index: 1000000;
   background-color: #00000091;
   opacity: 0;
   display: none;
@@ -255,6 +255,7 @@ input {
   right: 0;
   z-index: 10000;
   display: none;
+
   .close-btn {
     position: absolute;
     top: 0;
@@ -569,6 +570,18 @@ input {
   }
 }
 
+.tooltip-inner {
+  background-color: $whiteColor;
+  color: $grayDarkColor;
+  border: 1px solid $borderColor;
+  opacity: 1 !important;
+}
+
+.tooltip.bs-tooltip-top .tooltip-arrow::before {
+  display: none;
+}
+
+
 /*===================
 	Start Header style 
 =====================*/
@@ -668,6 +681,7 @@ input {
   // responsive style
   @include devices(tablet) {
     top: -30px;
+
     .header-top {
       display: none;
     }
@@ -709,12 +723,15 @@ input {
     }
   }
 }
-.mt-page{
+
+.mt-page {
   margin-top: 110px;
-  @include devices(tablet){
+
+  @include devices(tablet) {
     margin-top: 30px;
   }
 }
+
 /*===================
 	Start banner style 
 =====================*/
@@ -1753,14 +1770,34 @@ input {
 
 }
 
+/*===================
+	Start print page style 
+=====================*/
+.advert-details-page {
+  .advert-details-header {
+    color: $grayDarkColor;
+    text-align: center;
 
-.tooltip-inner {
-  background-color: $whiteColor;
-  color: $grayDarkColor;
-  border: 1px solid $borderColor;
-  opacity: 1 !important;
-}
+    h3 {
+      font-weight: $font-weight-700;
+    }
+  }
 
-.tooltip.bs-tooltip-top .tooltip-arrow::before {
-  display: none;
+  .advert-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      width: 40%;
+    }
+  }
+
+  .advert-details-content {
+    p {
+      font-size: 18px;
+      color: $grayLightColor;
+      text-align: justify;
+    }
+  }
 }
